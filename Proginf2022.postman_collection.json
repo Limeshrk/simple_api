@@ -1,0 +1,469 @@
+{
+	"info": {
+		"_postman_id": "9bdf039c-e8ef-4040-a6a9-4943eb7ccd8d",
+		"name": "Proginf2022",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3941610"
+	},
+	"item": [
+		{
+			"name": "halozatok",
+			"item": [
+				{
+					"name": "Google accept language header test",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fr",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "www.google.com",
+							"host": [
+								"www",
+								"google",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query parameter test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.google.com/search?q=web+development&sxsrf=AJOqlzVmWBn9n4_2AkRNwEoG0vH-CZOSsA%3A1677336328976&source=hp&ei=CB_6Y_WrOPeE9u8P6LCZsAo&iflsig=AK50M_UAAAAAY_otGK6LJPoIDJK0qYpc8AVio-6iRh7X&ved=0ahUKEwj1z7fg9LD9AhV3gv0HHWhYBqYQ4dUDCAg&uact=5&oq=web+development&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgUIABCABDIKCAAQgAQQFBCHAjIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BAgjECc6BQgAEJECOggILhCABBDUAjoLCC4QgAQQxwEQ0QM6CAguENQCEIAEOgsILhCABBDHARCvAToLCC4QrwEQxwEQgAQ6BwgAEIAEEAo6CAgAEIAEEMkDOggIABCABBCSA1AAWOgLYKsMaABwAHgAgAFWiAGfCJIBAjE0mAEAoAEB&sclient=gws-wiz",
+							"protocol": "https",
+							"host": [
+								"www",
+								"google",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "web+development"
+								},
+								{
+									"key": "sxsrf",
+									"value": "AJOqlzVmWBn9n4_2AkRNwEoG0vH-CZOSsA%3A1677336328976"
+								},
+								{
+									"key": "source",
+									"value": "hp"
+								},
+								{
+									"key": "ei",
+									"value": "CB_6Y_WrOPeE9u8P6LCZsAo"
+								},
+								{
+									"key": "iflsig",
+									"value": "AK50M_UAAAAAY_otGK6LJPoIDJK0qYpc8AVio-6iRh7X"
+								},
+								{
+									"key": "ved",
+									"value": "0ahUKEwj1z7fg9LD9AhV3gv0HHWhYBqYQ4dUDCAg"
+								},
+								{
+									"key": "uact",
+									"value": "5"
+								},
+								{
+									"key": "oq",
+									"value": "web+development"
+								},
+								{
+									"key": "gs_lcp",
+									"value": "Cgdnd3Mtd2l6EAMyBQgAEIAEMgUIABCABDIKCAAQgAQQFBCHAjIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BAgjECc6BQgAEJECOggILhCABBDUAjoLCC4QgAQQxwEQ0QM6CAguENQCEIAEOgsILhCABBDHARCvAToLCC4QrwEQxwEQgAQ6BwgAEIAEEAo6CAgAEIAEEMkDOggIABCABBCSA1AAWOgLYKsMaABwAHgAgAFWiAGfCJIBAjE0mAEAoAEB"
+								},
+								{
+									"key": "sclient",
+									"value": "gws-wiz"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Missing content type in header response",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "openlibrary.org/people/username/lists.json",
+							"host": [
+								"openlibrary",
+								"org"
+							],
+							"path": [
+								"people",
+								"username",
+								"lists.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Content type json response",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dog.ceo/api/breeds/image/random",
+							"protocol": "https",
+							"host": [
+								"dog",
+								"ceo"
+							],
+							"path": [
+								"api",
+								"breeds",
+								"image",
+								"random"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Firebase test request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://firestore.googleapis.com/v1/projects/chat-app-8a450/databases/(default)/documents/messages",
+							"protocol": "https",
+							"host": [
+								"firestore",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"v1",
+								"projects",
+								"chat-app-8a450",
+								"databases",
+								"(default)",
+								"documents",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cookie test",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "simple_api",
+			"item": [
+				{
+					"name": "Get projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response has 'projects' key and the response is 200 ok\", function () {",
+									"    pm.response.to.have.status(200); // check if the response status code is 200 OK",
+									"",
+									"    pm.expect(pm.response.json()).to.have.property('projects').that.is.an('array'); // check if the response has a 'projects' key and it is an array",
+									"",
+									"});",
+									"",
+									"pm.test(\"Response project has the necessary fields and tasks fields\", function () {",
+									"    ",
+									"    var projects = pm.response.json().projects;",
+									"    pm.expect(projects).to.have.lengthOf.at.least(1); // check if the array has at least one project object",
+									"",
+									"    for (var i = 0; i < projects.length; i++) {",
+									"        pm.expect(projects[i]).to.be.an('object'); // check if each element of the array is an object",
+									"        pm.expect(projects[i]).to.have.property('name').that.is.a('string'); // check if each project object has a 'name' property that is a string",
+									"        pm.expect(projects[i]).to.have.property('tasks').that.is.an('array'); // check if each project object has a 'tasks' property that is an array",
+									"",
+									"        var tasks = projects[i].tasks;",
+									"        for (var j = 0; j < tasks.length; j++) {",
+									"            pm.expect(tasks[j]).to.be.an('object'); // check if each element of the tasks array is an object",
+									"            pm.expect(tasks[j]).to.have.property('name').that.is.a('string'); // check if each task object has a 'name' property that is a string",
+									"            pm.expect(tasks[j]).to.have.property('completed').that.is.a('boolean'); // check if each task object has a 'completed' property that is a boolean",
+									"        }",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/projects",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response matches expected JSON\", function () {",
+									"    pm.response.to.have.status(201);  // check if the response status code is 200 OK",
+									"",
+									"    var expectedJson = {",
+									"    \"name\": \"my new project\",",
+									"    \"tasks\": [",
+									"        {",
+									"            \"completed\": false,",
+									"            \"name\": \"my new task\"",
+									"        }",
+									"    ]",
+									"    };",
+									"    pm.expect(pm.response.json()).to.eql(expectedJson);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"my new project\",\n    \"tasks\": [{\n        \"name\": \"my new task\",\n        \"completed\": false\n    }]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/project",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create project error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"my new project\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/project",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project by name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response matches expected JSON\", function () {",
+									"    pm.response.to.have.status(200);  // check if the response status code is 200 OK",
+									"    var expectedJson = {",
+									"    \"name\": \"my new project\",",
+									"    \"tasks\": [",
+									"        {",
+									"            \"completed\": false,",
+									"            \"name\": \"my new task\"",
+									"        }",
+									"    ]",
+									"    };",
+									"    pm.expect(pm.response.json()).to.eql(expectedJson);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/project/my new project",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"project",
+								"my new project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all tasks in project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response has 'tasks' key and it is an array of objects representing tasks\", function () {",
+									"    pm.response.to.have.status(200); // check if the response status code is 200 OK",
+									"",
+									"    pm.expect(pm.response.json()).to.have.property('tasks').that.is.an('array'); // check if the response has a 'tasks' key and it is an array",
+									"",
+									"    var tasks = pm.response.json().tasks;",
+									"    pm.expect(tasks).to.have.lengthOf.at.least(1); // check if the array has at least one task object",
+									"",
+									"    for (var i = 0; i < tasks.length; i++) {",
+									"        pm.expect(tasks[i]).to.be.an('object'); // check if each element of the array is an object",
+									"        pm.expect(tasks[i]).to.have.property('name').that.is.a('string'); // check if each task object has a 'name' property that is a string",
+									"        pm.expect(tasks[i]).to.have.property('completed').that.is.a('boolean'); // check if each task object has a 'completed' property that is a boolean",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/project/my first project/tasks",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"project",
+								"my first project",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add task to project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"my third project\",\n    \"completed\": { \"name\": \"new project\"}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/project/my first project/task",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"project",
+								"my first project",
+								"task"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
