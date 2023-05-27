@@ -1,15 +1,19 @@
+import pickle
 from flask import Flask, render_template, jsonify, request
 
 app = Flask(__name__)
 
-projects = [{
+""" projects = [{
     'name': 'my first project',
     'tasks': [{
         'name': 'my first task',
         'completed': False
     }]
-}]
+}] """
 
+# Load the projects data from a pickle file
+with open('projects.pickle', 'rb') as f:
+    projects = pickle.load(f)
 
 @app.route("/")
 def home():
