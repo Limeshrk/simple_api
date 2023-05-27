@@ -35,12 +35,20 @@ def create_project():
   projects.append(new_project)
   return jsonify(new_project), 201
 
-
+""" # Original get_project function
 @app.route("/project/<string:name>")
 def get_project(name):
   print(name)
   for project in projects:
     if project['name'] == name:
+      return jsonify(project)
+  return jsonify({'message': 'project not found'}), 404 """
+
+# Modified get_project function
+@app.route("/project/<string:project_id>")
+def get_project(project_id):
+  for project in projects["projects"]:
+    if project['project_id'] == project_id:
       return jsonify(project)
   return jsonify({'message': 'project not found'}), 404
 
