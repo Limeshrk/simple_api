@@ -6,13 +6,6 @@ from flask import Flask, render_template, jsonify, request
 
 app = Flask(__name__)
 
-""" projects = [{
-    'name': 'my first project',
-    'tasks': [{
-        'name': 'my first task',
-        'completed': False
-    }]
-}] """
 
 # Load the projects data from a pickle file
 def initialize_data():
@@ -77,14 +70,6 @@ def create_project():
   save_data(projects)
   return jsonify({'message': f'project created with id: {new_project_id}'}), 201
 
-""" # Original get_project function
-@app.route("/project/<string:name>")
-def get_project(name):
-  print(name)
-  for project in projects:
-    if project['name'] == name:
-      return jsonify(project)
-  return jsonify({'message': 'project not found'}), 404 """
 
 # Modified get_project function
 @app.route("/project/<string:project_id>")
@@ -92,6 +77,19 @@ def get_project(project_id):
   for project in projects["projects"]:
     if project['project_id'] == project_id:
       return jsonify(project)
+  return jsonify({'message': 'project not found'}), 404
+
+# Set project status to complete
+@app.route("/project/<string:project_id>/complete", methods=['POST'])
+def complete_project(project_id):
+  for project in projects["projects"]:
+    if project['project_id'] == project_id:
+      if project['completed']:
+        return '', 200
+      else:
+        project['completed'] = True
+        save_data(projects)
+        return jsonify(project), 200
   return jsonify({'message': 'project not found'}), 404
 
 
